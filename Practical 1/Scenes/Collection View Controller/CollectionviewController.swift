@@ -10,29 +10,23 @@ import SnapKit
 
 class CollectionViewController: UIViewController  {
     private lazy var collectionView: UICollectionView = {
-        let view = UICollectionView(frame: .zero)
+        let layout = UICollectionViewFlowLayout()
+        let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
         view.dataSource = self
         view.delegate = self
+        view.backgroundColor = .white
+        view.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         return view
     }()
-    
-    var delegate: UserProfile?
-    
-    let userData = [UserProfile
-        .init(name: "Giorgi", age: "24", profilePictureURL: "https://img.freepik.com/premium-vector/young-smiling-man-avatar-man-with-brown-beard-mustache-hair-wearing-yellow-sweater-sweatshirt-3d-vector-people-character-illustration-cartoon-minimal-style_365941-860.jpg"),
-        .init(name: "Ana", age: "22", profilePictureURL: "https://static.vecteezy.com/system/resources/thumbnails/001/993/889/small/beautiful-latin-woman-avatar-character-icon-free-vector.jpg"),
-        .init(name: "Irakli", age: "23", profilePictureURL: "https://static.vecteezy.com/system/resources/thumbnails/002/002/403/small/man-with-beard-avatar-character-isolated-icon-free-vector.jpg")
-    ]
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let layout = UICollectionViewFlowLayout()
-//        collectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
+
         setup()
         setupConstraints()
     }
-    
+        
     func setup() {
         view.addSubview(collectionView)
     }
@@ -56,12 +50,8 @@ extension CollectionViewController: UICollectionViewDataSource, UICollectionView
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let selectInfo = userData[indexPath.row]
         let selectVc = CollectionViewController()
-        selectVc.modalPresentationStyle = .fullScreen
-        selectVc.delegate = selectInfo
-        
-        navigationController?.pushViewController(selectVc, animated: false)
+        navigationController?.present(selectVc, animated: false)
     }
 }
 

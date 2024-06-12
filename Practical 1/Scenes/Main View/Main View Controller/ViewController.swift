@@ -10,7 +10,7 @@ import SnapKit
 
 class ViewController: UIViewController {
     
-    private lazy var tableview:  UITableView = {
+    private lazy var tableView:  UITableView = {
         let view = UITableView(frame: .zero)
         view.backgroundColor = UIColor.clear
         view.delegate = self
@@ -30,15 +30,15 @@ class ViewController: UIViewController {
     }
     
     func cellRegistration() {
-        tableview.register(TableViewCell.self, forCellReuseIdentifier: "tableViewCell")
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "tableViewCell")
     }
     
     func setup() {
-        view.addSubview(tableview)
+        view.addSubview(tableView)
     }
     
     func setupConstraints() {
-        tableview.snp.remakeConstraints { make in
+        tableView.snp.remakeConstraints { make in
             make.edges.equalToSuperview()
         }
     }

@@ -72,11 +72,10 @@
 			children = (
 				E30DA5602C1A0A5B0086A6E4 /* App */,
 				24B079952C19B587001CE514 /* Scenes */,
+				E30DA5622C1A3EA60086A6E4 /* Gesture View Controller */,
 				24B079912C19B44E001CE514 /* Domain */,
-				24B0797D2C19AF0A001CE514 /* Assets.xcassets */,
-				24B0797F2C19AF0A001CE514 /* LaunchScreen.storyboard */,
+				E30DA5632C1A3EFA0086A6E4 /* Resources */,
 				24B079822C19AF0A001CE514 /* Info.plist */,
-				24B0798F2C19B12D001CE514 /* GestureViewController.swift */,
 			);
 			path = "Practical 1";
 			sourceTree = "<group>";
@@ -147,6 +146,23 @@
 				24B0798D2C19B075001CE514 /* CollectionviewController.swift */,
 			);
 			path = "Collection View Controller";
+			sourceTree = "<group>";
+		};
+		E30DA5622C1A3EA60086A6E4 /* Gesture View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				24B0798F2C19B12D001CE514 /* GestureViewController.swift */,
+			);
+			path = "Gesture View Controller";
+			sourceTree = "<group>";
+		};
+		E30DA5632C1A3EFA0086A6E4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				24B0797F2C19AF0A001CE514 /* LaunchScreen.storyboard */,
+				24B0797D2C19AF0A001CE514 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
