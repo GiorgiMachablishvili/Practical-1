@@ -74,7 +74,6 @@
 			children = (
 				E30DA5602C1A0A5B0086A6E4 /* App */,
 				24B079952C19B587001CE514 /* Scenes */,
-				E30DA5622C1A3EA60086A6E4 /* Gesture View Controller */,
 				24B079912C19B44E001CE514 /* Domain */,
 				E30DA5632C1A3EFA0086A6E4 /* Resources */,
 				24B079822C19AF0A001CE514 /* Info.plist */,
@@ -104,6 +103,7 @@
 			children = (
 				E30DA55D2C1A08F60086A6E4 /* Main View */,
 				E30DA5612C1A0A850086A6E4 /* Collection View Controller */,
+				E30DA5622C1A3EA60086A6E4 /* Gesture View Controller */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
